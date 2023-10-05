@@ -1,0 +1,123 @@
+{%extends 'base.html'%}
+{%block title%}Technical Lead{%endblock title%}
+{%block body%}
+    <div class="container mt-3">
+        <div class="card mb-3">
+          <div class="card-header text-center">
+            <strong><h4>Technical Lead</h4></strong>
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+  
+              <small>
+                <footer class="footer">
+                  <h6><u><center>JOB DESCRIPTION</center></u></h6>
+                    <h6>Delivery Model:</h6>
+
+                    <p>The team is involved in the delivery of primarily new strategic solutions (green field development) or major augmentations of existing platforms
+                        All responsibilities fall within the team to deliver front-to-back solutions
+                        We promote and utilize a Lean Agile framework to allow for incremental development of new components and systems and we apply DevOps principles (DoD, code reviews, test-driven development, Continuous Integration, Continuous Deployment)
+                        We deliver solutions following microservices architectural principles
+                        The team is focused on client delivery, embracing feedback from our customers at all stages of the process and regular self-review of our operating model
+                        Collaboration with other teams and continuous learning are critical to our culture</p>
+                    <br>
+                    <h6>Tech Stack and Tooling:</h6>
+                    
+                    <p>Front End: Angular 6, Bootstrap, Angular Material, Selenium
+                        Back End (Optional): Java (1.8), Spring, Spring Integration, Spring Boot, Spring Cloud
+                        Deployment: Private cloud infrastructure (VMs or containers), Docker, Jenkins, Sonar
+                        Code Repository: GitLab<br>
+                        Development and Knowledge Base: IntelliJ, JIRA, Confluence
+                        Methodology: Scrum & Kanban</p>
+                    <br>
+                    <h6>Your role:</h6>
+
+                    <p>Passionate Angular developer with strong people and problem-solving skills
+                        Flexible, yet independent team player who is comfortable leaving her/his comfort zones and thinking creatively
+                        Inquisitive and analytically minded engineer who can articulate complex technical problems in a concise and clear manner
+                        Strong technologist with a preference towards developing her/his technical skills in cloud- and microservices-oriented architectures
+                        3 years developing in Angular 2<br>
+                        Ability to communicate technical ideas and express basic concepts in plain English
+                        Willingness to continuously improve and learn other frameworks, languages, tools, etc.
+                        A team-player attitude, including a willingness to assist team members with ad hoc work as and when required
+                        No prior business knowledge is required. Direct communication with stakeholders/business clients is encouraged and used as learning tool <br>
+                        </p>
+                </footer>
+              </small>
+              
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="text-center">APPLY NOW</h1>
+
+      <div class="container">
+        <legend>
+          <form action="/technical" method="post" encrypt="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name"><b>Full Name</b></label>
+                <input type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="First Name - Middle Name - Last Name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="email"><b>Email id</b></label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter Your Email Address" required>
+            </div>
+    
+            <div class="form-group mb-2">
+                <label for="phone"><b>Mobile Number</b></label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="+91" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email or phone number with anyone else.</small>
+            </div>
+
+            <div class="form-group mb-2">
+                <label for="select"><b>Gender</b></label>
+                <select name="gender" id="gender">
+                  <option selected disabled="true">Choose...</option>                 
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>          
+                </select>
+            </div>
+
+            <div class="form-group mb-2">
+                <label for="input"><b>Qualification</b></label>
+                <input type="text" id="Qualification" name="Qualification" placeholder="Mention your Qualification">
+            </div>
+
+            <div class="form-group mb-2">
+              <label for="select"><b>Competence</b></label>
+              <select name="competence" id="competence">
+                <option selected disabled="true">Choose...</option>                 
+                  <option value="Fresher"><b>I'm a Fresher</b> - I am a Student / Haven't worked after graduation</option>
+                  <option value="Experienced"><b>I'm Experienced</b> - I have work experience (Excluding interships)</option>          
+              </select>
+          </div>
+            
+              <div class="form-group mb-2">
+                <label for="name"><b>Current City</b></label>
+                <input type="text" class="form-control" id="city" name="city" aria-describedby="name" placeholder="Mention the city you live in" required>
+            </div>
+
+            <div class="form-group">
+                <label for="file"><b>Upload your Resume</b></label>
+                <input type="file" id="file" name="file">
+            </div>
+
+            <div class="form-group mb-2">
+                <label for="desc"><b>Describe Yourself :</b></label>
+                <textarea class="form-control" name="desc" id="desc" cols="30" rows="5" required></textarea>
+            </div>
+            <div class="form-group mb-4">
+                <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-success btn-lg mx-2 ">Submit</button>
+            
+            <button type="reset" class="btn btn-primary btn-lg mx-2">Reset</button>
+        </div>
+        </div>
+    </div>
+    </div>
+    </form>
+{%endblock body%}

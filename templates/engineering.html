@@ -1,0 +1,136 @@
+{%extends 'base.html'%}
+{%block title%}Engineering Manager{%endblock title%}
+{%block body%}
+    <div class="container mt-3">
+        <div class="card mb-3">
+          <div class="card-header text-center">
+            <strong><h4>Engineering Manager</h4></strong>
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+  
+              <small>
+                <footer class="footer">
+                  <h6><u><center>JOB DESCRIPTION</center></u></h6>
+                  <p>What we are looking for Engineering at our company is an interesting opportunity to solve complex problems. The scope of work will include advanced information-retrieval algorithms, massive scalability and large-scale applications that enrich user experience and predictive analytics in the area of ecommerce. The ideal candidate will have over 9 years of relevant industry experience and a strong technology acumen coupled with excellent people management skills.</p><br>
+                    <h6>Educational Qualification :</h6>
+
+                    <p>BE/B.Tech (or an equivalent degree) in Computer Science</p>
+                    <br>
+                    <h6>Responsibilities:</h6>
+                    
+                    <p>Provide technical leadership to major projects, build and guide an engineering team of 10-15 top notch engineers<br>
+
+                        • Chalk-out and implement the vision, technology roadmap and business goals <br>
+                        • Ensure that the team optimizes codes, while contributing to business goals and product strategies<br>
+                        
+                        • Create clear career paths for team members and ensure their growth by mentoring them <br>
+                        • Evaluate performances regularly and share and seek feedback<br>
+                        
+                        • Operate with scale and speed, amidst flux in the fast-paced environment <br>
+                        • Work closely with Engineering Leaders, Managers; Product Management, Business Development and Operation teams, and enable them by providing scalable and high quality technology solutions at a rapid pace<br>
+                        
+                        • Set up best practices for development and overlook its adoption<br>
+                        
+                        • Architect and design technically robust, flexible and scalable solutions<br>
+                        
+                        • Work with designers, business analysts, and product managers to estimate and plan projects in an agile environment<br>
+                        
+                        • Drive exceptional performance and collaborate with other teams on unclear interfaces amidst the rapidly evolving organizational activities.<br>
+                        
+                        <br>
+                        <h6>What you should have: (Skills Requirement)</h6>
+                        
+                        • Excellent leadership skills to manage and mentor teams<br>
+                        
+                        • A deep understanding of technologies and architecture in a highly scalable and available set-up<br>
+                        
+                        • Expertise in highly transactional, large relational and complex systems<br>
+                        
+                        • Strong object oriented design skills, and an uncanny ability to design intuitive modules and class-level interfaces<br>
+                        
+                        • Superior management skills to manage multi-engineer projects and experience in delivering high quality projects on time<br>
+                        
+                        • Strong technical competence with a track record of individual technical accomplishments</p>
+                    <br>
+                    
+                        </p>
+                </footer>
+              </small>
+              
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="text-center">APPLY NOW</h1>
+
+      <div class="container">
+        <legend>
+          <form action="/engineering" method="post" encrypt="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name"><b>Full Name</b></label>
+                <input type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="First Name - Middle Name - Last Name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="email"><b>Email id</b></label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter Your Email Address" required>
+            </div>
+    
+            <div class="form-group mb-2">
+                <label for="phone"><b>Mobile Number</b></label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="+91" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email or phone number with anyone else.</small>
+            </div>
+
+            <div class="form-group mb-2">
+                <label for="select"><b>Gender</b></label>
+                <select name="gender" id="gender">
+                  <option selected disabled="true">Choose...</option>                 
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>          
+                </select>
+            </div>
+
+            <div class="form-group mb-2">
+                <label for="input"><b>Qualification</b></label>
+                <input type="text" id="Qualification" name="Qualification" placeholder="Mention your Qualification">
+            </div>
+
+            <div class="form-group mb-2">
+              <label for="select"><b>Competence</b></label>
+              <select name="competence" id="competence">
+                <option selected disabled="true">Choose...</option>                 
+                  <option value="Fresher"><b>I'm a Fresher</b> - I am a Student / Haven't worked after graduation</option>
+                  <option value="Experienced"><b>I'm Experienced</b> - I have work experience (Excluding interships)</option>          
+              </select>
+          </div>
+            
+              <div class="form-group mb-2">
+                <label for="name"><b>Current City</b></label>
+                <input type="text" class="form-control" id="city" name="city" aria-describedby="name" placeholder="Mention the city you live in" required>
+            </div>
+
+            <div class="form-group">
+                <label for="file"><b>Upload your Resume</b></label>
+                <input type="file" id="file" name="file">
+            </div>
+
+            <div class="form-group mb-2">
+                <label for="desc"><b>Describe Yourself :</b></label>
+                <textarea class="form-control" name="desc" id="desc" cols="30" rows="5" required></textarea>
+            </div>
+            <div class="form-group mb-4">
+                <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-success btn-lg mx-2 ">Submit</button>
+            
+            <button type="reset" class="btn btn-primary btn-lg mx-2">Reset</button>
+        </div>
+        </div>
+    </div>
+    </div>
+    </form>
+{%endblock body%}
